@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+     {% csrf_token %}
+    Are tou want to delete
+    <input type="submit" value="Delete" class="btn btn-danger">
+    <a href="{% url 'todo_app:first_fun' %}" class="btn btn-primary">NO</a>
+</form>
+</body>
+</html>
+{% endblock %}

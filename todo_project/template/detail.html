@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="shadow card">
+                <div class="card-body">
+                    <h5 class="card-title">{{task.t_name}}</h5>
+                    <p><b>{{task.priority}}</b></p>
+                    <p><b>{{task.date}}</b></p>
+                    <a class="btn btn-danger" href="{% url 'todo_app:delete' task.id %}">DELETE</a>
+                    <a class="btn btn-primary"  href="{% url 'todo_app:update' task.id %}">UPDATE</a>
+                </div>
+            </div>
+</body>
+</html>
+{% endblock %}
